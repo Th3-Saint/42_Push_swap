@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   big_sort.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 00:34:14 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/05/28 22:08:01 by mrobaii          ###   ########.fr       */
+/*   Updated: 2022/12/25 17:20:27 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Push_Swap.h"
+#include "../includes/Push_Swap.h"
 
 void	find_max(t_node **stack_a, t_node **stack_b, int n)
 {

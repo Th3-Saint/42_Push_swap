@@ -6,9 +6,26 @@ CC		= gcc
 
 FLAGS	= -Wall -Werror -Wextra
 
-SRC		= Moves.c main.c Push_Swap.c Push_Swap_Utils.c Sorting.c moves2.c error.c utils.c big_sort.c
+SRC		= 	./Push_swap/srcs/Moves.c \
+			./Push_swap/srcs/main.c \
+			./Push_swap/srcs/Push_Swap.c \
+			./Push_swap/srcs/Push_Swap_Utils.c \
+			./Push_swap/srcs/Sorting.c \
+			./Push_swap/srcs/moves2.c \
+			./Push_swap/srcs/error.c \
+			./Push_swap/srcs/utils.c \
+			./Push_swap/srcs/big_sort.c
 
-BONUS	= checker.c Moves.c Push_Swap.c Push_Swap_Utils.c Sorting.c moves2.c error.c utils.c get_next_line_utils.c get_next_line.c
+BONUS	= 	./Push_swap_bonus/srcs/checker.c \
+			./Push_swap_bonus/srcs/Moves.c \
+			./Push_swap_bonus/srcs/Push_Swap.c \
+			./Push_swap_bonus/srcs/Push_Swap_Utils.c \
+			./Push_swap_bonus/srcs/Sorting.c \
+			./Push_swap_bonus/srcs/moves2.c \
+			./Push_swap_bonus/srcs/error.c \
+			./Push_swap_bonus/srcs/utils.c \
+			./Push_swap_bonus/srcs/get_next_line_utils.c \
+			./Push_swap_bonus/srcs/get_next_line.c
 
 BOBJ	= $(BONUS:.c=.o)
 

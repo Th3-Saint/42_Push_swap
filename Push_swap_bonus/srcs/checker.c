@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 20:36:05 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/05/29 16:49:46 by mrobaii          ###   ########.fr       */
+/*   Updated: 2022/12/25 17:21:15 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Push_Swap.h"
-#include "get_next_line.h"
+#include "../includes/Push_Swap.h"
+#include "../includes/get_next_line.h"
 
 void	use_actions(char *str, t_node **stack_a, t_node **stack_b)
 {

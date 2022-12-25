@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 22:37:38 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/05/30 01:18:21 by mrobaii          ###   ########.fr       */
+/*   Updated: 2022/12/25 17:20:12 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Push_Swap.h"
+#include "../includes/Push_Swap.h"
 
 int	main(int ac, char **av)
 {

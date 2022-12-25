@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Push_Swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:38:54 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/05/29 16:46:14 by mrobaii          ###   ########.fr       */
+/*   Updated: 2022/12/25 17:20:12 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Push_Swap.h"
+#include "../includes/Push_Swap.h"
 
 int	ft_strncmp(char *s1, char *s2, int n)
 {

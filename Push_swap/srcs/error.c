@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 16:58:42 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/05/28 21:12:10 by mrobaii          ###   ########.fr       */
+/*   Updated: 2022/12/25 17:20:12 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Push_Swap.h"
+#include "../includes/Push_Swap.h"
 
 void	check_double(t_node	*stack)
 {

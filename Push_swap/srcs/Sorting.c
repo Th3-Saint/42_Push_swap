@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Sorting.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 21:45:12 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/05/28 22:06:07 by mrobaii          ###   ########.fr       */
+/*   Updated: 2022/12/25 17:20:12 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Push_Swap.h"
+#include "../includes/Push_Swap.h"
 
 void	sort_two(t_node **stack, int ac, int n)
 {
