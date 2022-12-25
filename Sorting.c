@@ -6,13 +6,13 @@
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 21:45:12 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/05/25 00:34:58 by mrobaii          ###   ########.fr       */
+/*   Updated: 2022/05/28 22:06:07 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Push_Swap.h"
 
-void	sort_two(t_node **stack, int ac)
+void	sort_two(t_node **stack, int ac, int n)
 {
 	t_node	*head;
 	t_node	*sec;
@@ -22,11 +22,11 @@ void	sort_two(t_node **stack, int ac)
 	head = *stack;
 	sec = head->next;
 	if (head->num > sec->num)
-		sa(stack);
+		sa(stack, n);
 	exit(0);
 }
 
-void	sort_three(t_node **stack_a, int ac)
+void	sort_three(t_node **stack_a, int ac, int n)
 {
 	t_node	*head;
 	t_node	*sec;
@@ -34,26 +34,26 @@ void	sort_three(t_node **stack_a, int ac)
 	head = *stack_a;
 	sec = head->next;
 	if (ac == 3 || ac == 2)
-		sort_two(stack_a, ac);
+		sort_two(stack_a, ac, n);
 	if (head->num > sec->num && head->num < sec->next->num)
-		sa(stack_a);
+		sa(stack_a, n);
 	else if (head->num > sec->num && sec->num > sec->next->num)
 	{
-		sa(stack_a);
-		rra(stack_a);
+		sa(stack_a, n);
+		rra(stack_a, n);
 	}
 	else if (head->num > sec->next->num && sec->next->num > sec->num)
-		ra(stack_a);
+		ra(stack_a, n);
 	else if (head->num < sec->next->num && sec->next->num < sec->num)
 	{
-		sa(stack_a);
-		ra(stack_a);
+		sa(stack_a, n);
+		ra(stack_a, n);
 	}
 	else if (sec->next->num < head->num && head->num < sec->num)
-		rra(stack_a);
+		rra(stack_a, n);
 }
 
-void	approximity(t_node **stack_a, int num)
+void	approximity(t_node **stack_a, int num, int n)
 {
 	int	index;
 	int	app;
@@ -63,16 +63,16 @@ void	approximity(t_node **stack_a, int num)
 	while ((*stack_a)->num != num)
 	{
 		if ((*stack_a)->next->num == num)
-			sa(stack_a);
+			sa(stack_a, n);
 		else
 			if (app >= index)
-				ra(stack_a);
+				ra(stack_a, n);
 		else
-			rra(stack_a);
+			rra(stack_a, n);
 	}
 }
 
-void	chunks_approximity(t_node **stack_a, int start, int end)
+void	chunks_approximity(t_node **stack_a, int start, int end, int n)
 {
 	int	index;
 	int	app;
@@ -82,13 +82,13 @@ void	chunks_approximity(t_node **stack_a, int start, int end)
 	while (*stack_a && ((*stack_a)->num > end || (*stack_a)->num < start))
 	{
 		if (app >= index)
-			ra(stack_a);
+			ra(stack_a, n);
 		else
-			rra(stack_a);
+			rra(stack_a, n);
 	}
 }
 
-void	sort_ten(t_node **stack_a, t_node **stack_b)
+void	sort_ten(t_node **stack_a, t_node **stack_b, int n)
 {
 	int	size;
 	int	min;
@@ -99,17 +99,17 @@ void	sort_ten(t_node **stack_a, t_node **stack_b)
 	while (size != 3)
 	{
 		min = get_min(*stack_a);
-		approximity(stack_a, min);
-		pb(stack_a, stack_b);
+		approximity(stack_a, min, n);
+		pb(stack_a, stack_b, n);
 		size = ft_lstsize(*stack_a);
 		count++;
 	}
-	sort_three(stack_a, min);
+	sort_three(stack_a, min, n);
 	while (count - 1)
 	{
-		pa(stack_a, stack_b);
+		pa(stack_a, stack_b, n);
 		count--;
 	}
 	if (ft_lstsize(*stack_b) == 1)
-		pa(stack_a, stack_b);
+		pa(stack_a, stack_b, n);
 }

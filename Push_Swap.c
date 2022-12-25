@@ -6,11 +6,21 @@
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 17:38:54 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/05/25 15:37:59 by mrobaii          ###   ########.fr       */
+/*   Updated: 2022/05/29 16:46:14 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Push_Swap.h"
+
+int	ft_strncmp(char *s1, char *s2, int n)
+{
+	int	i;
+
+	i = 0;
+	while (i < n - 1 && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
+}
 
 void	ft_swap(int *a, int *b)
 {
@@ -41,35 +51,22 @@ void	ft_put_stack(char **av, t_node *stack, int ac)
 	i = 2;
 	while (i < ac)
 	{
+		if (!av[i][0])
+			exit(0);
 		stack->next = ft_lstadd(ft_atoi(av[i]));
 		stack = stack->next;
 		i++;
 	}
 }
 
-int	main(int ac, char **av)
+int	check_sorted(t_node *stack)
 {
-	t_node	*stack_a;
-	t_node	*stack_b;
-	t_node	*head;
-	int		i;
-
-	i = 2;
-	stack_b = NULL;
-	if (ac < 2)
+	while (stack->next)
 	{
-		printf("ERROR\n");
-		exit(0);
+		if (stack->num < stack->next->num)
+			stack = stack->next;
+		else
+			return (0);
 	}
-	head = ft_lstadd(ft_atoi(av[1]));
-	stack_a = head;
-	ft_put_stack(av, head, ac);
-	check_double(stack_a);
-	indexing(stack_a);
-	if (ac <= 4)
-		sort_three(&stack_a, ac);
-	else if (ac <= 11)
-		sort_ten(&stack_a, &stack_b);
-	else
-		ft_sort_big(&stack_a, &stack_b);
+	return (1);
 }
